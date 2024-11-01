@@ -17,15 +17,15 @@ export const Article = ({onClickShare}) => {
     }
 
     return(
-        <div className="font-body bg-primary-lgrayishblue flex justify-center items-center h-screen w-full px-96">
-            <div className="flex justify-center items-start ">
+        <div className="font-body bg-primary-lgrayishblue flex justify-center items-center h-screen w-full md:px-96 px-44">
+            <div className="flex md:flex-row flex-col justify-center items-start ">
                 <div className="w-full ">
-                <div><img className="rounded-s-lg  h-60" src={drawer} alt="" /></div>
+                <div><img className="md:rounded-s-lg sm:rounded-t-lg md:rounded-t-none w-full md:h-72" src={drawer} alt="" /></div>
                 </div>
 
-                <div className="relative rounded-e-lg bg-white py-4 px-5 h-60">
-                    <div className="flex flex-col space-y-3">
-                    <h3 className="text-primary-vdgrayishblue font-bold text-lg">
+                <div className="relative md:rounded-e-lg rounded-b-lg md:rounded-b-none bg-white py-6 md:px-5 px-6 md:h-72 md:w-full">
+                    <div className="flex flex-col md:space-y-2 space-y-2">
+                    <h3 className="text-primary-vdgrayishblue font-bold md:text-lg text-base">
                         Shift the overall look and feel by adding 
                         these wonderful touches to furniture in your home
                     </h3>
@@ -37,10 +37,10 @@ export const Article = ({onClickShare}) => {
                     </div>
 
                     <div className="flex justify-between items-center">
-                        <div className="mt-5 flex space-x-3 items-center">
-                            <div className=""><img className="rounded-full w-9 h-9" src={avatar} alt="" /></div>
-                            <div className="flex flex-col space-y-1">
-                                <p className="text-primary-vdgrayishblue text-base font-medium">
+                        <div className="md:mt-4 mt-7 flex space-x-3 items-center">
+                            <div className=""><img className="rounded-full md:w-9 md:h-9 w-6 h-6" src={avatar} alt="" /></div>
+                            <div className="flex flex-col md:space-y-1">
+                                <p className="text-primary-vdgrayishblue md:text-base text-sm font-bold  md:font-medium">
                                     Michelle Appleton
                                 </p>
                                 <span className="text-primary-grayishblue text-xs font-bold">28 Jun 2020</span>
@@ -48,10 +48,11 @@ export const Article = ({onClickShare}) => {
                             </div>
                         </div>
 
-                        
+                                                
                             {isIcon && (
-                                <div className="absolute left-60 bottom-20 bg-primary-vdgrayishblue py-2 px-6 rounded-lg flex space-x-3 w-48">
-                                <span className="text-primary-grayishblue uppercase font-light text-base">Share</span>
+                                <div className="absolute md:left-60 left-0 right-0 bottom-0 md:bottom-20 bg-primary-vdgrayishblue md:py-3 py-4 px-6 md:rounded-lg rounded-b-lg sm:h-20 md:h-auto flex justify-between items-center md:w-48 w-full">
+                                <div className="flex md:space-x-3 space-x-4">
+                                <span className="text-primary-grayishblue md:tracking-normal tracking-widest uppercase font-light text-base">Share</span>
                                 <div className="flex space-x-4 items-center">
                                     <a href="http://www.facebook.com" target="_blank">
                                         <FaFacebookF className="bg-white text-primary-vdgrayishblue text-base"/>
@@ -63,13 +64,18 @@ export const Article = ({onClickShare}) => {
                                         <FaPinterest className="bg-white text-primary-vdgrayishblue text-base"/>
                                     </a>
                                 </div>
+                                </div>
+                                <button type="click" onClick={handleClick} className={`md:hidden rounded-full md:w-7 md:h-7 w-6 h-6 flex justify-center items-center 
+                            ${isIcon ? "bg-primary-lgrayishblue" : "bg-primary-vdgrayishblue"}`}>
+                            <img className={`md:w-4 w-3 ${isIcon ? "text-white" : "text-primary-vdgrayishblue"} `} src={share} alt="" />
+                        </button>
                             </div>
                             )}
                         
 
-                        <button type="click" onClick={handleClick} className={` rounded-full w-7 h-7 flex justify-center items-center 
+                        <button type="click" onClick={handleClick} className={` rounded-full md:w-7 md:h-7 w-6 h-6 flex justify-center items-center 
                             ${isIcon ? "bg-primary-vdgrayishblue" : "bg-primary-lgrayishblue"}`}>
-                            <img className={`w-4 ${isIcon ? "text-white" : "text-primary-vdgrayishblue"} `} src={share} alt="" />
+                            <img className={`md:w-4 w-3 ${isIcon ? "text-white" : "text-primary-vdgrayishblue"} `} src={share} alt="" />
                         </button>
 
                     </div>
