@@ -17,27 +17,27 @@ export const Article = ({onClickShare}) => {
     }
 
     return(
-        <div className="font-body bg-primary-lgrayishblue flex justify-center items-center h-screen w-full md:px-96 px-44">
+        <div className="font-body bg-primary-lgrayishblue flex justify-center items-center h-screen w-full md:px-96 px-6">
             <div className="flex md:flex-row flex-col justify-center items-start ">
                 <div className="w-full ">
-                <div><img className="md:rounded-s-lg sm:rounded-t-lg md:rounded-t-none w-full md:h-72" src={drawer} alt="" /></div>
+                <div><img className="md:rounded-s-lg rounded-t-lg md:rounded-t-none w-full md:h-72" src={drawer} alt="" /></div>
                 </div>
 
                 <div className="relative md:rounded-e-lg rounded-b-lg md:rounded-b-none bg-white py-6 md:px-5 px-6 md:h-72 md:w-full">
-                    <div className="flex flex-col md:space-y-2 space-y-2">
+                    <div className="flex flex-col  space-y-4">
                     <h3 className="text-primary-vdgrayishblue font-bold md:text-lg text-base">
                         Shift the overall look and feel by adding 
                         these wonderful touches to furniture in your home
                     </h3>
-                    <p className="text-primary-grayishblue text-xs font-medium">
+                    <p className="text-primary-grayishblue md:text-xs text-sm font-medium">
                         Ever been in a room and felt like something was missing? Perhaps it 
                         felt slightly bare and uninviting. I&apos;ve got some simple tips to 
                         help you make any room feel complete.
                     </p>
                     </div>
 
-                    <div className="flex justify-between items-center">
-                        <div className="md:mt-4 mt-7 flex space-x-3 items-center">
+                    <div className="flex justify-between items-center md:mt-0 mt-5">
+                        <div className="md:mt-4 flex space-x-3 items-center">
                             <div className=""><img className="rounded-full md:w-9 md:h-9 w-6 h-6" src={avatar} alt="" /></div>
                             <div className="flex flex-col md:space-y-1">
                                 <p className="text-primary-vdgrayishblue md:text-base text-sm font-bold  md:font-medium">
